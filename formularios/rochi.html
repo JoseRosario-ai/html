@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulariost</title>
+    <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url("images.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+
+    table {
+      width: 100%;
+      max-width: 550px;
+      border-collapse: collapse;
+      margin: 40px 0 40px 30px;
+      background-color: rgba(255, 255, 255, 0.92);
+      border-radius: 10px;
+      overflow: hidden; /* Para que las esquinas redondeadas se vean bien */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #4f46e5;
+      color: white;
+    }
+
+    td img {
+      width: 75px;
+      height: 75px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>peronaje</th>
+            <th>imagen</th>
+            <th>descricion</th>
+        </tr>
+        <tr>
+            <td>ganondorf</td>
+            <td><img src="ganondorf.png" alt="ganondorf"></td>
+            <td>el destructor de hirule</td>
+        </tr>
+        <tr>
+            <td>bulbasaur</td>
+            <td><img src="bulbasaur.png" alt="bulbasaur"></td>
+            <td>pokemon tipo planta</td>
+        </tr>
+        <tr>
+            <td>ivisaur</td>
+            <td><img src="ivisaur.png" alt="ivisaur">
+            <td>pokemon tipo veneno planta</td>
+        </tr>
+        <tr>
+            <td>venasaur</td>
+            <td><img src="venasaur.png" alt="venasaur"></td>
+            <td>pokemon tipo planta veneno</td>
+        </tr>
+    </table>
+</body>
+</html>

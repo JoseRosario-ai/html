@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 20px 0;
+    }
+
+    form {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #333333;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #555555;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #cccccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+      background-color: #ffffff;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #4f46e5;
+      outline: none;
+    }
+
+    .grupo-opciones {
+      margin-bottom: 18px;
+    }
+
+    .titulo-grupo {
+      margin: 0 0 8px 0;
+      font-weight: 600;
+      color: #555555;
+      font-size: 14px;
+    }
+
+    .opcion-inline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: normal;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin: 0;
+      accent-color: #4f46e5;
+      cursor: pointer;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #4338ca;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="/procesar-datos" method="POST">
+    <h2>Formulario de contacto</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="ingrese su nombre" name="nombre" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" placeholder="ingrese una contraseña" name="correo" required>
+
+    <label for="motivo">Motivo de contacto:</label>
+    <select id="motivo" name="motivo" required>
+      <option value="">Selecciona una opción...</option>
+      <option value="consulta">Consulta general</option>
+      <option value="soporte">Soporte técnico</option>
+      <option value="ventas">Ventas</option>
+    </select>
+
+    <div class="grupo-opciones">
+      <p class="titulo-grupo">¿Cómo prefieres que te contactemos?</p>
+      <label class="opcion-inline">
+        <input type="radio" name="contacto_preferido" value="correo" checked> Correo electrónico
+      </label>
+      <label class="opcion-inline">
+        <input type="radio" name="contacto_preferido" placeholder="telefono" value="telefono"> Teléfono
+      </label>
+    </div>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+    <div class="grupo-opciones">
+      <label class="opcion-inline">
+        <input type="checkbox" name="boletin" value="si"> Suscribirme al boletín de noticias
+      </label>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
